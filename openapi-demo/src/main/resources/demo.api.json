@@ -1,0 +1,42 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Demo API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/endpointWithOptionals": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {}
+                        },
+                        "description": "success"
+                    }
+                },
+                "operationId": "getEndpointWithOptionals",
+                "summary": "Test for optional queryParams"
+            },
+            "parameters": [
+                {
+                    "name": "requiredParam",
+                    "description": "",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "query",
+                    "required": true
+                },
+                {
+                    "name": "optionalParam",
+                    "description": "",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "query"
+                }
+            ]
+        }
+    }
+}
